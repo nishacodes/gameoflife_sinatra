@@ -1,6 +1,6 @@
-require "./board"
-require "./cell"
-require "./pattern"
+# require "./board"
+# require "./cell"
+# require "./pattern"
 
 # INSTRUCTIONS
 # -------------

@@ -1,17 +1,6 @@
-#  move Pattern to a new class instead of module
-
-# def initialize
-#   @viz = 
-# end
-# def display
-#   @viz.display ( each viz class will have a display method)
-# end
-
-require "./pattern"
-
 class Board
   attr_accessor :grid, :width, :height, :to_die, :to_live
-  include Pattern
+  # include Pattern
 
 	def initialize(width, height, generations, pattern="random")
     @width = width
@@ -23,7 +12,7 @@ class Board
     create_empty_board
     assign_coordinates
     @pattern == "pattern" ? add_set_pattern : add_random_pattern
-    display
+    # display
     generation(generations)
 	end
 
@@ -73,15 +62,15 @@ class Board
       evaluate_cells
       tick!
       clear_stage
-      display
+      # display
       sleep(0.5)
     end
   end
 
-  def display
-    iterate_cells {|cell| print "#{cell.state}"}
-    puts
-  end
+  # def display
+  #   iterate_cells {|cell| print "#{cell.state}"}
+  #   puts
+  # end
 
 
   def iterate_cells

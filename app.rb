@@ -1,13 +1,15 @@
 require 'bundler'
 Bundler.require
+require './lib/board.rb'
+require './lib/cell.rb'
+require './lib/pattern.rb'
 
+  
 module GameOfLife
   class App < Sinatra::Application
     
-    before do 
-      
-    end
-
+    # board = Board.new(100,30,800,"pattern")
+   
     get '/' do
       erb :index
     end
